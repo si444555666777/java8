@@ -22,7 +22,7 @@ public class StreamFilter {
 
         System.out.println(result);
 
-        result = list.stream().skip(50).collect(toList());
+        result = list.stream().skip(5).collect(toList());//跳走前面5个元素
 
         System.out.println(result);
 

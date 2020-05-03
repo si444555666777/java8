@@ -110,6 +110,7 @@ public class LambdaUsage {
 
         Supplier<String> s = String::new;   //method inference.
         System.out.println(s.get().getClass());
+        System.out.println(s.get());
 
         System.out.println("================");
 

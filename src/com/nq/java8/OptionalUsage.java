@@ -13,7 +13,7 @@ public class OptionalUsage {
 
         Optional<Insurance> insuranceOptional = Optional.<Insurance>empty();
 
-//        insuranceOptional.get();
+        insuranceOptional.get();
 
         Optional<Insurance> insuranceOptional1 = Optional.of(new Insurance());
 
@@ -30,8 +30,9 @@ public class OptionalUsage {
         objectOptional.orElseThrow(() -> new RuntimeException("Not have reference"));
 */
 /*
-        Insurance insurance = insuranceOptional1.filter(i -> i.getName() != null).get();
-        System.out.println(insurance);*/
+        Insurance insurance = insuranceOptional1.filter(i -> i.getName() != null).get();  //获取不到，然后get(),惠报异常
+        System.out.println(insurance);
+*/
 
 /*        Optional<String> nameOptional = insuranceOptional1.map(i -> i.getName());
 

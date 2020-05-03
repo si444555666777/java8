@@ -26,7 +26,7 @@ public class StreamMap {
 
         String[] words = {"Hello", "World"};
 
-        //{h,e,l,l,o},{W,o,r,l,d}
+        //{H,e,l,l,o},{W,o,r,l,d}
         Stream<String[]> stream = Arrays.stream(words).map(w -> w.split(""));//Stream<String[]>
 
         //H,e,l,l,o,W,o,r,l,d

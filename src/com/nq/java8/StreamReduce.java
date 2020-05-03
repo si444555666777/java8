@@ -2,7 +2,6 @@ package com.nq.java8;
 
 import java.util.Arrays;
 import java.util.Optional;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -15,7 +14,12 @@ public class StreamReduce {
         Stream<Integer> stream = Arrays.stream(new Integer[]{1, 2, 3, 4, 5, 6, 7});
 
         Integer result = stream.reduce(0, Integer::sum);
+
+        stream = Arrays.stream(new Integer[]{1, 2, 3, 4, 5, 6, 7});
+        Integer result21 = stream.reduce(0, (i,j)->i+j);
         System.out.println(result);
+        System.out.println(result21);
+        System.out.println("=================");
 
         stream = Arrays.stream(new Integer[]{1, 2, 3, 4, 5, 6, 7});
 

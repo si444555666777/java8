@@ -22,7 +22,7 @@ public class StreamFind {
 
         Optional<Integer> optional3 = stream.filter(i -> i < 10).findAny();
 
-        System.out.println(optional3.orElse(-1));
+        System.out.println(optional3.orElse(-1));//有就找到，没有就返回-1
 
         stream = Arrays.stream(new Integer[]{1, 2, 3, 4, 5, 6, 7});
 
@@ -41,8 +41,9 @@ public class StreamFind {
     private static int find(Integer[] values, int defaultValue, Predicate<Integer> predicate) {
 
         for (int i : values) {
-            if (predicate.test(i))
+            if (predicate.test(i)) {
                 return i;
+            }
         }
 
         return defaultValue;
