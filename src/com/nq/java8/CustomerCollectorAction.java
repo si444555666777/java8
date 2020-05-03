@@ -15,7 +15,10 @@ public class CustomerCollectorAction {
         Collector<String, List<String>, List<String>> collector = new ToListCollector<>();
 
         String[] arrs = new String[]{"Alex", "Wang", "Hello", "Lambda", "Collector", "Java 8", "Stream"};
-
+        List<String> collect = Arrays.stream(arrs).filter(s -> s.length() >= 5)
+                .collect(collector);
+        System.out.println(collect);
+        System.out.println("--------------");
         List<String> result = Arrays.asList("Alex", "Wang", "Hello", "Lambda", "Collector", "Java 8", "Stream")
                 .parallelStream()
                 .filter(s -> s.length() >= 5)

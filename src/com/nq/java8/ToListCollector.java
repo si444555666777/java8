@@ -43,6 +43,7 @@ public class ToListCollector<T> implements Collector<T, List<T>, List<T>> {
     public Function<List<T>, List<T>> finisher() {
         log("finisher");
         return t -> t;
+//        return Function.identity();
     }
 
     @Override

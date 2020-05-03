@@ -30,6 +30,7 @@ public class CollectorsAction {
         testCounting();
         testGroupingByFunction();
         testGroupingByFunctionAndCollector();
+        testGroupingByFunctionAndCollector1();
         testGroupingByFunctionAndSupplierAndCollector();
         testSummarizingInt();
     }
@@ -77,6 +78,12 @@ public class CollectorsAction {
     private static void testGroupingByFunctionAndCollector() {
         System.out.println("testGroupingByFunctionAndCollector");
         Optional.of(menu.stream().collect(Collectors.groupingBy(Dish::getType, Collectors.averagingInt(Dish::getCalories))))
+                .ifPresent(System.out::println);
+    }
+
+    private static void testGroupingByFunctionAndCollector1() {
+        System.out.println("testGroupingByFunctionAndCollector");
+        Optional.of(menu.stream().collect(Collectors.groupingBy(Dish::getType, Collectors.counting())))
                 .ifPresent(System.out::println);
     }
 

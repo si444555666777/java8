@@ -15,7 +15,7 @@ public class OptionalInAction {
 
     private static String getInsuranceNameByOptional(Person person) {
 
-        return Optional.ofNullable(person)
+        return Optional.ofNullable(person)  //思考这里为什么要用flatMap，而不是用map（原视频有）
                 .flatMap(Person::getCar).flatMap(Car::getInsurance)
                 .map(Insurance::getName).orElse("Unknown");
     }

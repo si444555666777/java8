@@ -115,7 +115,7 @@ public class CollectorsAction4 {
 
 
     private static void testToMap() {
-        System.out.println("testToMap");
+        System.out.println("testToMap");//将Map转化为了线程安全的map
         Optional.of(menu.stream().collect(
                 Collectors.collectingAndThen(
                         Collectors.toMap(Dish::getName, Dish::getCalories),
@@ -144,6 +144,13 @@ public class CollectorsAction4 {
                 System.out.println(ste.getFileName());
             }
         }
+
+/*        Optional.of(menu.stream()
+                .collect(Collectors.toMap(Dish::getName, Dish::getCalories)))
+                .ifPresent(v->{
+                    System.out.println(v);
+                    System.out.println(v.getClass());
+                });*/
     }
 
     /**

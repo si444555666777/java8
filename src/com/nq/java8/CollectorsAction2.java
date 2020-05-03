@@ -14,7 +14,7 @@ import static com.nq.java8.CollectorsAction.menu;
  * @Date:2016/10/28 QQ:532500648
  * QQ交流群:286081824
  ***************************************/
-public class CollectorsAction2 {
+public class  CollectorsAction2 {
 
     public static void main(String[] args) {
         testGroupingByConcurrentWithFunction();
@@ -53,7 +53,7 @@ public class CollectorsAction2 {
     }
 
     private static void testJoining() {
-        System.out.println("testJoining");
+        System.out.println("testJoining");   //需要通过map转换为String后才能join
         Optional.of(menu.stream().map(Dish::getName).collect(Collectors.joining()))
                 .ifPresent(System.out::println);
     }
